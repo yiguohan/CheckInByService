@@ -26,9 +26,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     public static final String targetURL = "http://120.25.123.151:8082//attendance/sign.action?method=add";
 
-    public static final String signPlace = "%E5%B9%BF%E4%B8%9C%E7%9C%81%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%AE%9D%E5%AE%89%E5%8C%BA%E6%B0%B4%E5%BA%93%E8%B7%AF167";
-    public static final String placeX = "113.894213";
-    public static final String placeY = "22.614049";
+    public static final String SIGNPLACE = "%E5%B9%BF%E4%B8%9C%E7%9C%81%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%AE%9D%E5%AE%89%E5%8C%BA%E6%B0%B4%E5%BA%93%E8%B7%AF167";
+    public static final String PLACEX = "113.894213";
+    public static final String PLACEY = "22.614049";
     public static final String SIGHTYPE_IN = "0";
     public static final String SIGHTYPE_OUT = "1";
     public static String checkinSuccess = "上班打卡成功！";
@@ -102,9 +102,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> map = new HashMap<String, String>();
-                map.put("signPlace", signPlace);
-                map.put("placeX", placeX);
-                map.put("placeY", placeY);
+                map.put("signPlace", SIGNPLACE);
+                map.put("placeX", PLACEX);
+                map.put("placeY", PLACEY);
                 map.put("empNo", empNo);
                 map.put("signType", signType);
                 return map;
